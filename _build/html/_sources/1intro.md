@@ -4,7 +4,7 @@ En este curso cubriremos conceptos básicos e intermedios para usar Python enfoc
 
 El contenido del curso se encuentra subido a http://acosta-leon.org/python/
 
-:::{Titulo}
+:::{Note}
 Nota 1!
 :::
 
@@ -25,22 +25,22 @@ https://www.python.org/dev/peps/pep-0020/
 
 ---
 ## ¿Qué es Python y por qué usarlo?
-- Python es un lenguaje de programación interpretado, dinámico, de alto nivel y multipropósito. ¿:confused:? 
+- Python es un lenguaje de programación interpretado, dinámico, de alto nivel y multipropósito. 
 
      ![image](./images/confused.png)
 
    - **Interpretado:** se ejecuta "en tiempo real". No es necesario compilarlo (traducirlo) a lenguaje de máquina.
    - **Dinámico** no necesitamos especificar el tipo de variable que vamos a asignar, Python infiere acorde a la estructura de los datos.
-   - **De alto nivel:** Sintáxis amigable. Es más parecido al inglés que al lenguaje de máquina.
+   - **De alto nivel:** Sintáxis amigable. Es más parecido a leer inglés que lenguaje de máquina.
    - **Multipropósito:** Desde desarrollo web hasta la ciencia de datos: *machine learning*, robótica, estadística, física, etc. Los casos de uso de Python en el mundo real son ilimitados.
 - Por éstas y otras razones históricas y culturales, Python ha desarrollado una gran y activa comunidad científica. En los últimos 10 años, Python ha pasado de ser un "lenguaje para informáticos" a uno de los lenguajes más importantes para el análisis de datos y el desarrollo de software en la academia y la industria.
 
 
-:::{Disclaimer}
+:::{Note}
 Python no es perfecto para todo! El secreto es saber cuales son las fortalezas y debilidades de cada lenguaje y saber aprovecharlos.
 :::
 
-Por ejemplo, mi workflow es:
+**Por ejemplo, mi workflow es:**
 
 | Extracción y manipulación datos | Análisis Exploratorio | Gráficos | Análisis Estadística | Modelos |
 |  :---- |  :---- |  :---- |  :---- |  :---- |
@@ -49,7 +49,7 @@ Por ejemplo, mi workflow es:
 
 Bloque de código:
 
-```{python}
+```
 e = mc^2
 print('hola')
 ```
