@@ -1,0 +1,5 @@
+# In _toc.yml
+format: jb-book
+root: 1intro
+chapters:
+- file: simulation.ipynb
