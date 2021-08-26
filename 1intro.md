@@ -8,7 +8,9 @@ El contenido del curso se encuentra subido a https://github.com/alejo-acosta/pyt
 Nota 1!
 :::
 
-## Primero, algunos recursos importantes para el curso.
+---
+
+## 1.1. Primero, algunos recursos importantes para el curso.
 - [**Libro de texto principal:**](https://www.oreilly.com/library/view/python-for-data/9781491957653/) Python for Data Analysis : Data Wrangling with Pandas, NumPy, and IPython by Wes McKinney, 2017.
 
    ![image](https://learning.oreilly.com/library/cover/9781491957653/250w/)
@@ -17,33 +19,72 @@ Nota 1!
 
 - **Stack Overflow en** [**Inglés**](https://stackoverflow.com/questions/tagged/python) y [**español**](https://es.stackoverflow.com/questions/tagged/python): Sitio web de preguntas y respuestas para programadores profesionales y entusiastas.
 
-https://www.python.org/dev/peps/pep-0020/
-
-
-> Es muy probable que si tienes un problema con tu código, alguien más ya tuvo el mismo problema y fue resuelto por la comunidad. Solo necesita saber donde buscar.
+> Es muy probable que si tienes un problema con tu código, alguien más ya lo tuvo y fue resuelto por la comunidad. Solo necesita saber donde buscar.
 
 ---
-## ¿Qué es Python y por qué usarlo?
+## 1.2. ¿Qué es Python y por qué usarlo?
 - Python es un lenguaje de programación interpretado, dinámico, de alto nivel y multipropósito. 
 
      ![image](./images/confused.png)
 
    - **Interpretado:** se ejecuta "en tiempo real". No es necesario compilarlo (traducirlo) a lenguaje de máquina.
    - **Dinámico** no necesitamos especificar el tipo de variable que vamos a asignar, Python infiere acorde a la estructura de los datos.
-   - **De alto nivel:** Sintáxis amigable. Es más parecido a leer inglés que lenguaje de máquina.
+   - **De alto nivel:** Sintaxis amigable. Es más parecido a leer inglés que lenguaje de máquina.
    - **Multipropósito:** Desde desarrollo web hasta la ciencia de datos: *machine learning*, robótica, estadística, física, etc. Los casos de uso de Python en el mundo real son ilimitados.
 - Por éstas y otras razones históricas y culturales, Python ha desarrollado una gran y activa comunidad científica. En los últimos 10 años, Python ha pasado de ser un "lenguaje para informáticos" a uno de los lenguajes más importantes para el análisis de datos y el desarrollo de software en la academia y la industria.
 
 
 :::{Note}
-Python no es perfecto para todo! El secreto es saber cuales son las fortalezas y debilidades de cada lenguaje y saber aprovecharlos.
+Python no es perfecto para todo! El secreto es entender las fortalezas y debilidades de cada lenguaje y saber aprovecharlos.
 :::
 
 **Por ejemplo, mi workflow es:**
 
-| Extracción y manipulación datos | Análisis Exploratorio | Gráficos | Análisis Estadística | Modelos |
+| Extracción y manipulación datos | Análisis Exploratorio | Gráficos | Análisis Estadístico | Modelos |
 |  :---- |  :---- |  :---- |  :---- |  :---- |
-| 1.Python | 1.Python <br /> 2.Stata <br /> 3.Excel | 1.Python <br /> 2.Excel | 1.Python <br /> 2.Stata | 1.Stata <br /> 2.R |
+| 1.Python <br/> 2.Stata | 1.Python <br/> 2.Stata <br/> 3.Excel | 1.Python <br/> 2.Excel | 1.Python <br/> 2.Stata | 1.Stata <br/> 2.R |
+
+
+---
+## 1.3. El Zen de Python
+
+En general, la comunidad Python es amigable y muy apasionada. Para muchos, escribir código es un arte. Por esto, se ha creado una filosofía sobre las mejores prácticas sobre como escribir código:
+
+**The Zen of Python**
+- Beautiful is better than ugly.
+- Explicit is better than implicit.
+- Simple is better than complex.
+- Complex is better than complicated.
+- Flat is better than nested.
+- Sparse is better than dense.
+- Readability counts.
+- Special cases aren't special enough to break the rules.
+- Although practicality beats purity.
+- Errors should never pass silently.
+- Unless explicitly silenced.
+- In the face of ambiguity, refuse the temptation to guess.
+- There should be one-- and preferably only one --obvious way to do it.
+- Although that way may not be obvious at first unless you're Dutch.
+- Now is better than never.
+- Although never is often better than *right* now.
+- If the implementation is hard to explain, it's a bad idea.
+- If the implementation is easy to explain, it may be a good idea.
+- Namespaces are one honking great idea -- let's do more of those!
+
+
+"*Reglas*" más específicas sobre buenas prácticas las podemos encontrar en [PEP8](https://www.python.org/dev/peps/pep-0008/)
+
+---
+## 1.4. Instalación, IDE y Jupyter Notebooks
+A diferencia de R o Stata, hay miles de formas distintas para usar Python. 
+
+La instalación puede ser utilizando la documentación oficial de [Pyhton](https://www.python.org/downloads/) o utilizando [Anaconda](https://www.anaconda.com/products/individual), un gestor de librerías.
+
+Para escribir y editar programas en Python igualmente existen una infinidad de editores de texto: Vscode, PyCharm, Sublime, Vim, Atom, Jupyter, etc.
+
+Encontrar la combinación que mejor se adapte a nuestras necesidades e instalar Python puede ser un proceso agotador :( .
+
+Para hacer 
 
 
 Bloque de código:
