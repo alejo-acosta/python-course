@@ -71,17 +71,3 @@ plt.figure(figsize=(10,10))
 plt.scatter(x,y, c=c, cmap='tab10')
 plt.show()
 
-
-# In[6]:
-
-
-get_ipython().run_line_magic('matplotlib', 'widget')
-
-
-# In[7]:
-
-
-plt.figure(figsize=(5,5))
-plt.scatter(x,y, c=c, cmap='tab10')
-plt.show()
-
