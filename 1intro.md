@@ -82,9 +82,9 @@ La instalación puede ser utilizando la documentación oficial de [Pyhton](https
 
 Para escribir y editar programas en Python igualmente existen una infinidad de editores de texto: Vscode, PyCharm, Sublime, Vim, Atom, Jupyter, etc.
 
-Encontrar la combinación que mejor se adapte a nuestras necesidades e instalar Python puede ser un proceso agotador :( .
+Encontrar la combinación que mejor se adapte a nuestras necesidades e instalar Python puede ser un proceso agotador.
 
-Para hacer 
+Para hacer  
 
 
 Bloque de código:
