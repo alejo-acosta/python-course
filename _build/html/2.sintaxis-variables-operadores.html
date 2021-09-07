@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2. Operadore &#8212; Curso Python</title>
+    <title>2. Sintaxis, variables y operadores &#8212; Curso Python</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -42,8 +42,6 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -51,10 +49,12 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Simulación Mercado laboral" href="simulation.html" />
-    <link rel="prev" title="1.5 Jupyter notebooks" href="1.5jupyter.html" />
+    <link rel="prev" title="1.5. Jupyter notebooks" href="1.5jupyter.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -94,12 +94,12 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1.5jupyter.html">
-   1.5 Jupyter notebooks
+   1.5. Jupyter notebooks
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   2. Operadore
+   2. Sintaxis, variables y operadores
   </a>
  </li>
  <li class="toctree-l1">
@@ -195,6 +195,58 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sintaxis">
+   2.1. Sintaxis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduccion-a-datos">
+   2.1. Introducción a datos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#memory-reference">
+     Memory reference
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resource-allocation">
+     Resource allocation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tipos-de-variables">
+   Tipos de variables
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numericas">
+     Numéricas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#string-texto">
+     String (Texto)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructurados">
+     Estructurados
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -203,8 +255,169 @@
         
               <div>
                 
-  <div class="section" id="operadore">
-<h1>2. Operadore<a class="headerlink" href="#operadore" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="sintaxis-variables-y-operadores">
+<h1>2. Sintaxis, variables y operadores<a class="headerlink" href="#sintaxis-variables-y-operadores" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sintaxis">
+<h2>2.1. Sintaxis<a class="headerlink" href="#sintaxis" title="Permalink to this headline">¶</a></h2>
+<p>En general Python usa una sintaxis en forma de <em>funciones</em>: <span class="math notranslate nohighlight">\(f(x,y,z)\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;hola&#39;</span><span class="p">,</span> <span class="s1">&#39;UDLA&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 2 hola UDLA
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para delimitar texto se puede ocupar doble o simple comillas: “hola” , ‘hola’</p>
+<p>Todo lo que esté después del signo numeral # se lee como comentario.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Esto es un comentario</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;esto es código. La raíz cuadrada de 2 es = &#39;</span><span class="p">,</span> <span class="mi">2</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="c1"># Esto también es un comentario</span>
+<span class="c1"># Esta línea también es comentario</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>esto es código. La raíz cuadrada de 2 es =  1.4142135623730951
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Algunas funciones específicas se pueden encadenar:</span>
+
+<span class="n">texto</span> <span class="o">=</span> <span class="s2">&quot;Investigación&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">texto</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>investigación
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># una larga línea de código se puede dividir con backslash \</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hola&quot;</span>\
+    <span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HOLA
+</pre></div>
+</div>
+</div>
+</div>
+<p>La sangría son los espacios al comienzo de una línea de código.</p>
+<p>En otros lenguajes de programación la sangría se usa solo por legibilidad (e.g. R, Stata), pero en Python es muy importante.</p>
+<p>Python usa sangría para indicar bloques de código.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cubo_mas_uno</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">c</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">c</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cubo_mas_uno</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="introduccion-a-datos">
+<h2>2.1. Introducción a datos<a class="headerlink" href="#introduccion-a-datos" title="Permalink to this headline">¶</a></h2>
+<p>Una variable es una referencia (o vínculo) que hacemos entre un nombre y un espacio en la memoria.</p>
+<div class="section" id="memory-reference">
+<h3>Memory reference<a class="headerlink" href="#memory-reference" title="Permalink to this headline">¶</a></h3>
+<p><img alt="UDLA logo" height="480px" src="images/memory.jpg" align="center" hspace="10px" vspace="10px"></p>
+</div>
+<div class="section" id="resource-allocation">
+<h3>Resource allocation<a class="headerlink" href="#resource-allocation" title="Permalink to this headline">¶</a></h3>
+<p><img alt="UDLA logo" height="480px" src="images/cpu.jpg" align="center" hspace="10px" vspace="10px"></p><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">]</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
+
+<span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;z&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print(x)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tipos-de-variables">
+<h2>Tipos de variables<a class="headerlink" href="#tipos-de-variables" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="numericas">
+<h3>Numéricas<a class="headerlink" href="#numericas" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">enteros</span> <span class="o">=</span> <span class="mi">12345</span>
+<span class="n">flotantes</span> <span class="o">=</span> <span class="mf">1.234</span>
+<span class="n">complejos</span> <span class="o">=</span> <span class="nb">complex</span><span class="p">(</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">enteros</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">flotantes</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">complejos</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12345
+1.234
+(1.2+3.4j)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="string-texto">
+<h3>String (Texto)<a class="headerlink" href="#string-texto" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">texto1</span> <span class="o">=</span> <span class="s1">&#39;Hola Udla&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">texto1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hola Udla
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="estructurados">
+<h3>Estructurados<a class="headerlink" href="#estructurados" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -232,7 +445,7 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="1.5jupyter.html" title="previous page">1.5 Jupyter notebooks</a>
+    <a class='left-prev' id="prev-link" href="1.5jupyter.html" title="previous page">1.5. Jupyter notebooks</a>
     <a class='right-next' id="next-link" href="simulation.html" title="next page">Simulación Mercado laboral</a>
 
         </div>

@@ -1,23 +1,28 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # 1.5 Jupyter notebooks
+# # 1.5. Jupyter notebooks
 
 # Jupyter Notebooks son una forma bastante interactiva para programar en Python (funciona también en R!).
+
+# ## 1.5.1. Texto
 
 # ---
 
 # 
-# Permite insertar texto y formatearlo:
+# 1. Permite insertar texto y formatearlo:
 # - **Negrita**
 # - *Cursiva*
 # - <font color='red'>Colores</font>
 # - <ins> Subrayado </ins>
 # 
-# También podemos utilizar $\LaTeX$ para escribir fórumulas:
+
+# 
+# 2. Podemos utilizar $\LaTeX$ para escribir fórumulas:
 # - $Y = AL^{\alpha}K^{\beta}$
 # 
-# Finalmente se puede asignar jerarquía para organizar el código de mejor forma:
+
+# 3. Asignar jerarquías para mejor organización del código:
 # 
 # ## 1. Librerías
 # ## 2. Importar datos
@@ -25,14 +30,14 @@
 # ### 2.2. Datos UPC
 # ## 3. Análisis
 
-# También podemos insertar imágenes:
+# 4. Finalmente, podemos insertar imágenes:
 # <p><img alt="UDLA logo" height="120px" src="https://www.udla.edu.ec/wp-content/uploads/2016/07/Logo.jpg" align="center" hspace="10px" vspace="10px"></p>
 
-# Todo lo anterior se combina con código, táblas y figuras generadas en Python!
+# Todo lo anterior se combina con código, tablas y figuras generadas en Python!
 
 # ---
 
-# ## Ejemplo de código, datos y figuras.
+# ## 1.5.2. Ejemplo de código, datos y figuras.
 
 # In[1]:
 
