@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jupyter notebooks &#8212; Curso Python</title>
+    <title>1.5 Jupyter notebooks &#8212; Curso Python</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,7 +53,7 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Simulación Mercado laboral" href="simulation.html" />
+    <link rel="next" title="2. Operadore" href="2.sintaxis-variables-operadores.html" />
     <link rel="prev" title="1. Introducción" href="1intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -94,7 +94,12 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Jupyter notebooks
+   1.5 Jupyter notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2.sintaxis-variables-operadores.html">
+   2. Operadore
   </a>
  </li>
  <li class="toctree-l1">
@@ -239,7 +244,7 @@
               <div>
                 
   <div class="section" id="jupyter-notebooks">
-<h1>Jupyter notebooks<a class="headerlink" href="#jupyter-notebooks" title="Permalink to this headline">¶</a></h1>
+<h1>1.5 Jupyter notebooks<a class="headerlink" href="#jupyter-notebooks" title="Permalink to this headline">¶</a></h1>
 <p>Jupyter Notebooks son una forma bastante interactiva para programar en Python (funciona también en R!).</p>
 <hr class="docutils" />
 <p>Permite insertar texto y formatearlo:</p>
@@ -268,9 +273,10 @@
 </div>
 <div class="section" id="analisis">
 <h2>3. Análisis<a class="headerlink" href="#analisis" title="Permalink to this headline">¶</a></h2>
-<hr class="docutils" />
-<p>Todo lo anterior se combina con código, táblas y figuras generadas en Python!</p>
+<p>También podemos insertar imágenes:</p>
+<p><img alt="UDLA logo" height="120px" src="https://www.udla.edu.ec/wp-content/uploads/2016/07/Logo.jpg" align="center" hspace="10px" vspace="10px"></p><p>Todo lo anterior se combina con código, táblas y figuras generadas en Python!</p>
 </div>
+<hr class="docutils" />
 <div class="section" id="ejemplo-de-codigo-datos-y-figuras">
 <h2>Ejemplo de código, datos y figuras.<a class="headerlink" href="#ejemplo-de-codigo-datos-y-figuras" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
@@ -289,9 +295,9 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">1000</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span><span class="n">n</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> <span class="o">+</span> <span class="n">c</span><span class="o">*</span><span class="mi">2</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> <span class="o">+</span> <span class="n">c</span><span class="o">*</span><span class="mf">1.5</span>
 
 <span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">c</span><span class="p">])</span>
 </pre></div>
@@ -313,7 +319,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="s1">&#39;y&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -344,32 +350,62 @@
   <tbody>
     <tr>
       <th>0</th>
-      <td>-0.683027</td>
-      <td>-1.432240</td>
+      <td>4.329873</td>
+      <td>5.078713</td>
       <td>2.0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1.208198</td>
-      <td>-0.633683</td>
-      <td>2.0</td>
+      <td>2.062080</td>
+      <td>2.706715</td>
+      <td>1.0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>1.373908</td>
-      <td>1.160721</td>
+      <td>2.471593</td>
+      <td>1.367196</td>
       <td>1.0</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>-0.168344</td>
-      <td>-1.707219</td>
-      <td>2.0</td>
+      <td>2.493903</td>
+      <td>2.282325</td>
+      <td>1.0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>-1.799072</td>
-      <td>0.701481</td>
+      <td>4.976583</td>
+      <td>2.319644</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>3.964037</td>
+      <td>3.461388</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>1.503526</td>
+      <td>2.658535</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>2.686313</td>
+      <td>3.596882</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>0.606395</td>
+      <td>0.698060</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>1.713101</td>
+      <td>1.150562</td>
       <td>1.0</td>
     </tr>
   </tbody>
@@ -378,14 +414,15 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;tab10&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">scat</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Accent&#39;</span><span class="p">)</span>
+<span class="n">legend1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="o">*</span><span class="n">scat</span><span class="o">.</span><span class="n">legend_elements</span><span class="p">(),</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;tipos&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/1.5jupyter_9_0.png" src="_images/1.5jupyter_9_0.png" />
+<img alt="_images/1.5jupyter_12_0.png" src="_images/1.5jupyter_12_0.png" />
 </div>
 </div>
 </div>
@@ -417,7 +454,7 @@
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="1intro.html" title="previous page">1. Introducción</a>
-    <a class='right-next' id="next-link" href="simulation.html" title="next page">Simulación Mercado laboral</a>
+    <a class='right-next' id="next-link" href="2.sintaxis-variables-operadores.html" title="next page">2. Operadore</a>
 
         </div>
         

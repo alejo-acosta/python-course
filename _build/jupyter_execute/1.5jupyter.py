@@ -1,11 +1,13 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Jupyter notebooks
+# # 1.5 Jupyter notebooks
 
 # Jupyter Notebooks son una forma bastante interactiva para programar en Python (funciona también en R!).
 
 # ---
+
+# 
 # Permite insertar texto y formatearlo:
 # - **Negrita**
 # - *Cursiva*
@@ -22,9 +24,13 @@
 # ### 2.1. Datos crimen
 # ### 2.2. Datos UPC
 # ## 3. Análisis
-# ---
+
+# También podemos insertar imágenes:
+# <p><img alt="UDLA logo" height="120px" src="https://www.udla.edu.ec/wp-content/uploads/2016/07/Logo.jpg" align="center" hspace="10px" vspace="10px"></p>
 
 # Todo lo anterior se combina con código, táblas y figuras generadas en Python!
+
+# ---
 
 # ## Ejemplo de código, datos y figuras.
 
@@ -44,9 +50,9 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 
 
 n = 1000
-x = np.random.normal(0,1,n)
-y = np.random.normal(0,1,n)
 c = np.random.choice([1,2],n)
+x = np.random.normal(0,1,n) + c*2
+y = np.random.normal(0,1,n) + c*1.5
 
 array = np.array([x,y,c])
 
@@ -61,13 +67,14 @@ array.shape
 
 
 df = pd.DataFrame(array, index=['x','y','c']).T
-df.head()
+df.head(10)
 
 
 # In[5]:
 
 
-plt.figure(figsize=(10,10))
-plt.scatter(x,y, c=c, cmap='tab10')
+fig = plt.figure(figsize=(8,8))
+scat = plt.scatter(x,y, c=c, cmap='Accent')
+legend1 = plt.legend(*scat.legend_elements(), title="tipos")
 plt.show()
 

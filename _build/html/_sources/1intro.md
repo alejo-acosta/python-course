@@ -4,9 +4,9 @@ En este curso cubriremos conceptos **básicos e intermedios** de Python enfocado
 
 El contenido del curso se encuentra subido a https://github.com/alejo-acosta/python-course .
 
-:::{Note}
-Nota 1!
-:::
+```{admonition} Título
+Contenido
+```
 
 ---
 
@@ -76,26 +76,19 @@ En general, la comunidad Python es amigable y muy apasionada. Para muchos, escri
 
 ---
 ## 1.4. Instalación, IDE y Jupyter Notebooks
-A diferencia de R o Stata, hay miles de formas distintas para usar Python. 
+A diferencia de R o Stata, hay muchas de formas distintas para usar Python. 
 
-La instalación puede ser utilizando la documentación oficial de [Pyhton](https://www.python.org/downloads/) o utilizando [Anaconda](https://www.anaconda.com/products/individual), un gestor de librerías.
+> La instalación puede ser utilizando la documentación y sitio web oficial oficial de [Python](https://www.python.org/downloads/) o utilizando [Anaconda](https://www.anaconda.com/products/individual), un gestor de librerías.
 
-Para escribir y editar programas en Python igualmente existen una infinidad de editores de texto: Vscode, PyCharm, Sublime, Vim, Atom, Jupyter, etc.
+> Para escribir y editar programas igualmente existen una muchos de editores de texto: Vscode, PyCharm, Sublime, Vim, Atom, Jupyter, etc.
 
-Encontrar la combinación que mejor se adapte a nuestras necesidades e instalar Python puede ser un proceso agotador.
+Encontrar la combinación que mejor se adapte a nuestras necesidades e instalar Python puede ser un proceso agotador. 
 
-Para hacer  
+Sin embargo, entre académicos y *científicos* de datos, dos herramientas ampliamente utilizadas son [jupyter](https://jupyter.org/) y [spyder](https://www.spyder-ide.org/). Nosotros trabajaremos con el primero, mediante una herramienta en línea: 
 
+### [*Google Colaboratory*](https://colab.research.google.com/)
 
-Bloque de código:
-
-```
-e = mc^2
-print('hola')
-```
-
-Gracias!
-
+*P.D. Necesitamos una cuenta de Google.*
 
 ```{bibliography}
 ```

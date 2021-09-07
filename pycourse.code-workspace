@@ -3,5 +3,16 @@
         {
             "path": "."
         }
-    ]
+    ],
+    "settings": {
+        "spellright.language": [
+            "es_EC"
+        ],
+        "spellright.documentTypes": [
+            "markdown",
+            "latex",
+            "plaintext",
+            "python"
+        ]
+    }
 }
