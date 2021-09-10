@@ -4,10 +4,6 @@ En este curso cubriremos conceptos **básicos e intermedios** de Python enfocado
 
 El contenido del curso se encuentra subido a https://github.com/alejo-acosta/python-course .
 
-```{admonition} Título
-Contenido
-```
-
 ---
 
 ## 1.1. Primero, algunos recursos importantes para el curso.
