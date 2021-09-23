@@ -53,8 +53,6 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Simulación Mercado laboral" href="simulation.html" />
-    <link rel="prev" title="1.5. Jupyter notebooks" href="1.5jupyter.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -86,25 +84,15 @@
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="1intro.html">
-   1. Introducción
+  <a class="reference internal" href="intro.html">
+   Bienvenidos
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="1.5jupyter.html">
-   1.5. Jupyter notebooks
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   2. Sintaxis, variables y operadores
-  </a>
- </li>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="simulation.html">
-   Simulación Mercado laboral
+   Mercado laboral Simulación
   </a>
  </li>
 </ul>
@@ -173,18 +161,13 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/alejo-acosta/python-course/master?urlpath=lab/tree/2.sintaxis-variables-operadores.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/2.sintaxis-variables-operadores.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/alejo-acosta/python-course/blob/master/2.sintaxis-variables-operadores.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
         
         
     </div>
@@ -267,17 +250,26 @@
 <p>En general Python usa una sintaxis en forma de <em>funciones</em>: <span class="math notranslate nohighlight">\(f(x,y,z)\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;hola&#39;</span><span class="p">,</span> <span class="s1">&#39;UDLA&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;hola&#39;</span><span class="p">,</span> <span class="s1">&#39;UDLA&#39;</span><span class="p">)</span>
 
 <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 2 hola UDLA
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 2 3 hola UDLA
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>range(0, 10)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Python siempre comienza numerando desde <strong>0</strong>, es decir el primer elemento de un arreglo tendrá como índice el número 0. Esta es una característica que Python comparte con la mayoría de lenguajes de programación fuertes (C, Java, Swift, PHP, etc.). El porqué, está fuera del alcance del curso pero si desean entender más sobre este tema, pueden leer el siguiente artículo: <a class="reference external" href="https://medium.com/analytics-vidhya/array-indexing-0-based-or-1-based-dd89d631d11c">Array Indexing: 0-based or 1-based?</a> o el siguiente ensayo desde una perspectiva matemática: <a class="reference external" href="https://www.cs.utexas.edu/users/EWD/ewd08xx/EWD831.PDF">Why numbering should start at zero</a>.</p>
+<p>Podemos obtener la documentación (<em>docstring</em>) de una función utilizando el signo <strong>?</strong> antes de la función:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">?</span>range
 </pre></div>
 </div>
 </div>
@@ -287,13 +279,13 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Esto es un comentario</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Esto es código. La raíz cuadrada de 2 es = &#39;</span><span class="p">,</span> <span class="mi">2</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="c1"># Esto también es un comentario</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Esto es código. La raíz cuadrada de 2 es =&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="c1"># Esto también es un comentario</span>
 <span class="c1"># Esta línea también es comentario</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Esto es código. La raíz cuadrada de 2 es =  1.4142135623730951
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Esto es código. La raíz cuadrada de 2 es = 1.4142135623730951
 </pre></div>
 </div>
 </div>
@@ -318,6 +310,18 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># una larga línea de código se puede dividir con backslash \</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hola&quot;</span>\
     <span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HOLA
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hola&#39;</span>     <span class="o">.</span>       <span class="n">upper</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -457,8 +461,8 @@ líneas
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Se puede incluir caracteres especiales con backslash \:</span>
-<span class="n">texto_espacio</span> <span class="o">=</span> <span class="s2">&quot;línea 1 </span><span class="se">\n</span><span class="s2"> línea 2&quot;</span> <span class="c1"># \n = newline</span>
-<span class="n">texto_tab</span> <span class="o">=</span> <span class="s2">&quot;línea 1 </span><span class="se">\t</span><span class="s2"> línea 2&quot;</span> <span class="c1"># \n = newline</span>
+<span class="n">texto_espacio</span> <span class="o">=</span> <span class="s2">&quot;línea 1 </span><span class="se">\n</span><span class="s2"> línea 2&quot;</span> <span class="c1"># \n = new line</span>
+<span class="n">texto_tab</span> <span class="o">=</span> <span class="s2">&quot;texto 1 </span><span class="se">\t</span><span class="s2"> texto 2 </span><span class="se">\t</span><span class="s2"> texto3 3&quot;</span> <span class="c1"># \t = tabulación</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">texto_espacio</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-------------------------&quot;</span><span class="p">)</span>
@@ -470,10 +474,14 @@ líneas
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>línea 1 
  línea 2
 -------------------------
-línea 1 	 línea 2
+texto 1 	 texto 2 	 texto3 3
 </pre></div>
 </div>
 </div>
+</div>
+<div class="admonition-pregunta admonition">
+<p class="admonition-title">Pregunta</p>
+<p>¿Por qué “línea 1” y “línea 2” tienen sangrías diferentes?</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -564,7 +572,7 @@ línea 1 	 línea 2
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 1, 2, &#39;a&#39;, &#39;b&#39;, &#39;a&#39;, &#39;b&#39;]
 (1, 2, 3, 4, 5, &#39;a&#39;, &#39;b&#39;, 1)
 {&#39;ECU&#39;: &#39;Ecuador&#39;, &#39;COL&#39;: &#39;Colombia&#39;, &#39;PER&#39;: &#39;Perú&#39;, &#39;BOL&#39;: &#39;Bolivia&#39;}
-{&#39;a&#39;, 1, 2, 3, &#39;b&#39;}
+{1, 2, 3, &#39;a&#39;, &#39;b&#39;}
 </pre></div>
 </div>
 </div>
@@ -759,8 +767,6 @@ c
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="1.5jupyter.html" title="previous page">1.5. Jupyter notebooks</a>
-    <a class='right-next' id="next-link" href="simulation.html" title="next page">Simulación Mercado laboral</a>
 
         </div>
         

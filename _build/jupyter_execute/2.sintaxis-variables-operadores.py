@@ -10,24 +10,34 @@
 # In[1]:
 
 
-print(1,2, 'hola', 'UDLA')
+print(1,2,3, 'hola', 'UDLA')
 
 range(10)
+
+
+# Python siempre comienza numerando desde **0**, es decir el primer elemento de un arreglo tendrá como índice el número 0. Esta es una característica que Python comparte con la mayoría de lenguajes de programación fuertes (C, Java, Swift, PHP, etc.). El porqué, está fuera del alcance del curso pero si desean entender más sobre este tema, pueden leer el siguiente artículo: [Array Indexing: 0-based or 1-based?](https://medium.com/analytics-vidhya/array-indexing-0-based-or-1-based-dd89d631d11c) o el siguiente ensayo desde una perspectiva matemática: [Why numbering should start at zero](https://www.cs.utexas.edu/users/EWD/ewd08xx/EWD831.PDF).
+
+# Podemos obtener la documentación (*docstring*) de una función utilizando el signo **?** antes de la función:
+
+# In[2]:
+
+
+get_ipython().run_line_magic('pinfo', 'range')
 
 
 # Para delimitar texto se puede ocupar doble o simple comillas: "hola" , 'hola'
 
 # Todo lo que esté después del signo numeral # se lee como comentario.
 
-# In[2]:
+# In[3]:
 
 
 # Esto es un comentario
-print('Esto es código. La raíz cuadrada de 2 es = ', 2**0.5) # Esto también es un comentario
+print('Esto es código. La raíz cuadrada de 2 es =', 2**0.5) # Esto también es un comentario
 # Esta línea también es comentario
 
 
-# In[3]:
+# In[4]:
 
 
 # Algunas funciones específicas se pueden encadenar:
@@ -36,11 +46,17 @@ texto = "Investigación"
 print(texto.upper().lower())
 
 
-# In[4]:
+# In[5]:
 
 
 # una larga línea de código se puede dividir con backslash \
 print("hola"    .upper())
+
+
+# In[6]:
+
+
+print('hola'     .       upper())
 
 
 # La sangría son los espacios al comienzo de una línea de código.
@@ -49,7 +65,7 @@ print("hola"    .upper())
 # 
 # Python usa sangría para indicar bloques de código.
 
-# In[5]:
+# In[7]:
 
 
 def cubo_mas_uno(x):
@@ -58,7 +74,7 @@ def cubo_mas_uno(x):
     return c
 
 
-# In[6]:
+# In[8]:
 
 
 cubo_mas_uno(3)
@@ -79,7 +95,7 @@ cubo_mas_uno(3)
 # <!-- <p><img alt="UDLA logo" height="480px" src="./images/cpu.jpg" align="center" hspace="10px" vspace="10px"></p> -->
 # ![image](./images/cpu.jpg)
 
-# In[7]:
+# In[9]:
 
 
 x = ["a", "b", "c"]
@@ -89,7 +105,7 @@ y = x
 y[0] = "z"
 
 
-# In[8]:
+# In[10]:
 
 
 print(x)
@@ -99,7 +115,7 @@ print(x)
 
 # ### Numéricas
 
-# In[9]:
+# In[11]:
 
 
 enteros = 12345
@@ -113,7 +129,7 @@ print(complejos)
 
 # ### String (Texto)
 
-# In[10]:
+# In[12]:
 
 
 texto1 = 'Hola UDLA'
@@ -121,7 +137,7 @@ texto1 = 'Hola UDLA'
 print(texto1)
 
 
-# In[11]:
+# In[13]:
 
 
 # Multiples líneas de texto
@@ -135,19 +151,23 @@ líneas
 print(texto_lineas)
 
 
-# In[12]:
+# In[14]:
 
 
 # Se puede incluir caracteres especiales con backslash \:
-texto_espacio = "línea 1 \n línea 2" # \n = newline
-texto_tab = "línea 1 \t línea 2" # \n = newline
+texto_espacio = "línea 1 \n línea 2" # \n = new line
+texto_tab = "texto 1 \t texto 2 \t texto3 3" # \t = tabulación
 
 print(texto_espacio)
 print("-------------------------")
 print(texto_tab)
 
 
-# In[13]:
+# ```{admonition} Pregunta
+# ¿Por qué "línea 1" y "línea 2" tienen sangrías diferentes?
+# ```
+
+# In[15]:
 
 
 # El texto puede tomar el valor de una variable (formatted text)
@@ -173,7 +193,7 @@ print(texto_formato)
 
 # Se declaran de la siguiente manera:
 
-# In[14]:
+# In[16]:
 
 
 # LISTAS
@@ -189,7 +209,7 @@ dict1 = {"ECU": "Ecuador", "COL": "Colombia", "PER": "Perú", "BOL": "Bolivia"}
 set1 = set(list1)
 
 
-# In[15]:
+# In[17]:
 
 
 print(list1)
@@ -200,7 +220,7 @@ print(set1)
 
 # A estas colecciones se les considera estructuras unidemensionales. Sin embargo, podemos representar N dimensiones al anidarlar (*nested lists*).
 
-# In[16]:
+# In[18]:
 
 
 matriz = [[3, 4, 5], [2, 6, 7], [0, 1, 9]]
@@ -216,7 +236,7 @@ print(notas)
 
 # Podemos seleccionar datos específicos de las colecciones utilizando el método slicing. **Tener en cuenta que la numeración empieza en 0**.
 
-# In[17]:
+# In[19]:
 
 
 list1 = [1, 2, 3, "a", "b", "c"]
@@ -241,7 +261,7 @@ list1 = [1, 2, 3, "a", "b", "c"]
 # | PER | Perú     |
 # | BOL | Bolivia  |
 
-# In[18]:
+# In[20]:
 
 
 # Seleccionar elementos
@@ -250,7 +270,7 @@ print( list1[2] )
 print( list1[5] )
 
 
-# In[19]:
+# In[21]:
 
 
 # Seleccionar rangos
@@ -258,14 +278,14 @@ print( list1[3:7] )
 print( list1[2:] )
 
 
-# In[20]:
+# In[22]:
 
 
 # Seleccionar desde el último elemento
 print( list1[-4] )
 
 
-# In[21]:
+# In[23]:
 
 
 # Diccionario
@@ -284,7 +304,7 @@ print(dict1["COL"])
 
 # Si las colecciones son modificables (o mutables), podemos modificar datos específicos
 
-# In[22]:
+# In[24]:
 
 
 lista2 = [1, 2, 3, "a", "b", "c"]

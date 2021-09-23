@@ -76,13 +76,13 @@ A diferencia de R o Stata, hay muchas de formas distintas para usar Python.
 
 > La instalación puede ser utilizando la documentación y sitio web oficial oficial de [Python](https://www.python.org/downloads/) o utilizando [Anaconda](https://www.anaconda.com/products/individual), un gestor de librerías.
 
-> Para escribir y editar programas igualmente existen una muchos de editores de texto: Vscode, PyCharm, Sublime, Vim, Atom, Jupyter, etc.
+> Para escribir y editar programas igualmente existen muchos de editores de texto: Vscode, PyCharm, Sublime, Vim, Atom, Jupyter, etc.
 
 Encontrar la combinación que mejor se adapte a nuestras necesidades e instalar Python puede ser un proceso agotador. 
 
 Sin embargo, entre académicos y *científicos* de datos, dos herramientas ampliamente utilizadas son [jupyter](https://jupyter.org/) y [spyder](https://www.spyder-ide.org/). Nosotros trabajaremos con el primero, mediante una herramienta en línea: 
 
-### [*Google Colaboratory*](https://colab.research.google.com/)
+[*Google Colaboratory*](https://colab.research.google.com/)
 
 *P.D. Necesitamos una cuenta de Google.*
 
